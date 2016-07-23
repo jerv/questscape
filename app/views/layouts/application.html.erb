@@ -11,10 +11,24 @@
 </head>
 <body>
 
-<div class="container">
 
+<nav>
+	<div class="container">
+		<%= link_to 'View Quests', quests_path %>
+		<%= link_to 'My Accounts', accounts_path %>
+		<% if user_signed_in? %>
+			  <%= link_to 'Edit Profile', edit_user_password_path(current_user) %>
+			  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+		<% else %>
+
+			  <%= link_to 'Login', new_user_session_path, method: :get %>
+			</p>
+		<% end %>
+	</div>
+</nav>
+
+<div class="container margin-md">
 	<%= yield %>
-
 </div>
 
 </body>

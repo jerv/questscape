@@ -1,0 +1,2 @@
+json.extract! account, :id, :attack, :strength, :defence, :range, :prayer, :magic, :runecrafting, :construction, :hitpoints, :agility, :herblore, :thieving, :crafting, :fletching, :slayer, :hunter, :mining, :smithing, :fishing, :cooking, :firemaking, :farming, :username, :created_at, :updated_at
+json.url account_url(account, format: :json)

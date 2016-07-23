@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160723180017) do
+ActiveRecord::Schema.define(version: 20160723223535) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer  "attack"
+    t.integer  "strength"
+    t.integer  "defence"
+    t.integer  "prayer"
+    t.integer  "magic"
+    t.integer  "runecrafting"
+    t.integer  "construction"
+    t.integer  "hitpoints"
+    t.integer  "agility"
+    t.integer  "herblore"
+    t.integer  "thieving"
+    t.integer  "crafting"
+    t.integer  "fletching"
+    t.integer  "slayer"
+    t.integer  "hunter"
+    t.integer  "mining"
+    t.integer  "smithing"
+    t.integer  "fishing"
+    t.integer  "cooking"
+    t.integer  "firemaking"
+    t.integer  "farming"
+    t.string   "username"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.integer  "woodcutting"
+    t.integer  "ranged"
+  end
+
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
 
   create_table "models", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,33 +64,33 @@ ActiveRecord::Schema.define(version: 20160723180017) do
   add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
 
   create_table "quests", force: :cascade do |t|
-    t.string   "attack"
-    t.string   "strength"
-    t.string   "defence"
-    t.string   "ranged"
-    t.string   "prayer"
-    t.string   "magic"
-    t.string   "runecrafting"
-    t.string   "construction"
-    t.string   "hitpoints"
-    t.string   "agility"
-    t.string   "herblore"
-    t.string   "thieving"
-    t.string   "crafting"
-    t.string   "fletching"
-    t.string   "slayer"
-    t.string   "hunter"
-    t.string   "mining"
-    t.string   "smithing"
-    t.string   "fishing"
-    t.string   "cooking"
-    t.string   "firemaking"
-    t.string   "woodcutting"
-    t.string   "farming"
+    t.integer  "attack"
+    t.integer  "strength"
+    t.integer  "defence"
+    t.integer  "prayer"
+    t.integer  "magic"
+    t.integer  "runecrafting"
+    t.integer  "construction"
+    t.integer  "hitpoints"
+    t.integer  "agility"
+    t.integer  "herblore"
+    t.integer  "thieving"
+    t.integer  "crafting"
+    t.integer  "fletching"
+    t.integer  "slayer"
+    t.integer  "hunter"
+    t.integer  "mining"
+    t.integer  "smithing"
+    t.integer  "fishing"
+    t.integer  "cooking"
+    t.integer  "firemaking"
+    t.integer  "farming"
     t.string   "name"
     t.string   "url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "woodcutting"
+    t.integer  "ranged"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,8 +106,10 @@ ActiveRecord::Schema.define(version: 20160723180017) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "account_id"
   end
 
+  add_index "users", ["account_id"], name: "index_users_on_account_id"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 

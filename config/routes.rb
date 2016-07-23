@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
+  resources :accounts
   devise_for :users
   devise_for :models
   resources :quests
-  resources :home, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+
+  authenticated do
+    root :to => 'accounts#index', as: :authenticated
+  end
+
+  devise_scope :user do
+    root 'devise/sessions#new'
+  end
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

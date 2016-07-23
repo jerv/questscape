@@ -1,0 +1,68 @@
+$xs:5px;
+$sm:20px;
+$md:40px;
+$lg:60px;
+$xl:80px;
+
+$default-margin: 20px;
+$default-padding: 20px;
+
+[class|="margin"] {
+	margin-top: $default-margin; margin-bottom: $default-margin;
+}
+.margin-none {
+	margin-top: 0 !important; margin-bottom: 0 !important;
+}
+.padding-none {
+	padding: 0 !important;
+}
+.margin-xs {
+	margin-top: $xs; margin-bottom: $xs;
+}
+.margin-sm {
+	margin-top: $sm; margin-bottom: $sm;
+}
+.margin-md {
+	margin-top: $md; margin-bottom: $md;
+}
+.margin-lg {
+	margin-top: $lg; margin-bottom: $lg;
+}
+.margin-xl {
+	margin-top: $xl; margin-bottom: $xl;
+} 
+
+[class|="padding"] {
+	padding-top: $default-padding; padding-bottom: $default-padding;
+}
+.padding-none {
+	padding-top: 0; padding-bottom: 0;
+}
+.padding-xs {
+	padding-top: $xs; padding-bottom: $xs;
+}
+.padding-sm {
+	padding-top: $sm; padding-bottom: $sm;
+}
+.padding-md {
+	padding-top: $md; padding-bottom: $md;
+}
+.padding-lg {
+	padding-top: $lg; padding-bottom: $lg;
+}
+.padding-xl {
+	padding-top: $xl; padding-bottom: $xl;
+}
+
+nav {
+	color: #fff;
+	background-color: #333;
+	a, a:hover, a:active {
+		color: #fff;
+		padding: 0 12px;
+		line-height: 32px;
+	}
+	@media (min-width: 968px) {
+		text-align: right;
+	}
+}

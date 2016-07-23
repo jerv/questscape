@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Accounts/Characters</h1>
+
+<ul>
+  <% @accounts.each do |account| %>
+    <li>
+      <h2>
+        <%= link_to account do %>
+          <%= account.username %>
+        <% end %>
+      </h2>
+      <p><%= link_to 'Edit', edit_account_path(account) %></p>
+      <p><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'Add Chacter/Account', new_account_path %>

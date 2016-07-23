@@ -1,0 +1,146 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <%= @account.username %>
+</h2>
+
+<div class="row">
+  <div class="col-xs-4">
+    <p>
+      <strong>Attack:</strong>
+      <%= @account.attack %>
+    </p>
+
+    <p>
+      <strong>Strength:</strong>
+      <%= @account.strength %>
+    </p>
+
+    <p>
+      <strong>Defence:</strong>
+      <%= @account.defence %>
+    </p>
+
+    <p>
+      <strong>Ranged:</strong>
+      <%= @account.ranged %>
+    </p>
+
+    <p>
+      <strong>Prayer:</strong>
+      <%= @account.prayer %>
+    </p>
+
+    <p>
+      <strong>Magic:</strong>
+      <%= @account.magic %>
+    </p>
+
+    <p>
+      <strong>Runecrafting:</strong>
+      <%= @account.runecrafting %>
+    </p>
+
+    <p>
+      <strong>Construction:</strong>
+      <%= @account.construction %>
+    </p>
+  </div>
+  <div class="col-xs-4">
+    <p>
+      <strong>Hitpoints:</strong>
+      <%= @account.hitpoints %>
+    </p>
+
+    <p>
+      <strong>Agility:</strong>
+      <%= @account.agility %>
+    </p>
+
+    <p>
+      <strong>Herblore:</strong>
+      <%= @account.herblore %>
+    </p>
+
+    <p>
+      <strong>Thieving:</strong>
+      <%= @account.thieving %>
+    </p>
+
+    <p>
+      <strong>Crafting:</strong>
+      <%= @account.crafting %>
+    </p>
+
+    <p>
+      <strong>Fletching:</strong>
+      <%= @account.fletching %>
+    </p>
+
+    <p>
+      <strong>Slayer:</strong>
+      <%= @account.slayer %>
+    </p>
+
+    <p>
+      <strong>Hunter:</strong>
+      <%= @account.hunter %>
+    </p>
+  </div>
+  <div class="col-xs-4">
+    <p>
+      <strong>Mining:</strong>
+      <%= @account.mining %>
+    </p>
+
+    <p>
+      <strong>Smithing:</strong>
+      <%= @account.smithing %>
+    </p>
+
+    <p>
+      <strong>Fishing:</strong>
+      <%= @account.fishing %>
+    </p>
+
+    <p>
+      <strong>Cooking:</strong>
+      <%= @account.cooking %>
+    </p>
+
+    <p>
+      <strong>Firemaking:</strong>
+      <%= @account.firemaking %>
+    </p>
+
+    <p>
+      <strong>Woodcutting:</strong>
+      <%= @account.woodcutting %>
+    </p>
+
+    <p>
+      <strong>Farming:</strong>
+      <%= @account.farming %>
+    </p>
+  </div>
+</div>
+
+<%= link_to 'Edit Stats', edit_account_path(@account) %>
+
+<h2>Quest Available:</h2>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <h3>Ready:</h3>
+    <ul>
+      <% @readyQuests.each do |q| %>
+        <li>
+          <a href="<%= q.url %>">
+           <%= q.name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
