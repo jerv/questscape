@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'devise'
+
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
