@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Quests</h1>
+
+<% @quests.each do |quest| %>
+  <h2><%= quest.name %></h2>
+  <h5><%= quest.url %></h5>
+
+  <h4>Quest Requirements:</h4>
+  <ul>
+    <li>Attack: <%= quest.attack %></li>
+    <li>Strengli: <%= quest.strength %></li>
+    <li>Defence: <%= quest.defence %></li>
+    <li>Ranged: <%= quest.ranged %></li>
+    <li>Prayer: <%= quest.prayer %></li>
+    <li>Magic: <%= quest.magic %></li>
+    <li>Runecrafting: <%= quest.runecrafting %></li>
+    <li>Construction: <%= quest.construction %></li>
+    <li>Hitpoints: <%= quest.hitpoints %></li>
+    <li>Agility: <%= quest.agility %></li>
+    <li>Herblore: <%= quest.herblore %></li>
+    <li>Thieving: <%= quest.thieving %></li>
+    <li>Crafting: <%= quest.crafting %></li>
+    <li>Fletching: <%= quest.fletching %></li>
+    <li>Slayer: <%= quest.slayer %></li>
+    <li>Hunter: <%= quest.hunter %></li>
+    <li>Mining: <%= quest.mining %></li>
+    <li>Smithing: <%= quest.smithing %></li>
+    <li>Fishing: <%= quest.fishing %></li>
+    <li>Cooking: <%= quest.cooking %></li>
+    <li>Firemaking: <%= quest.firemaking %></li>
+    <li>Woodcutting: <%= quest.woodcutting %></li>
+    <li>Farming: <%= quest.farming %></li>
+  </ul>
+  <p><%= link_to 'Show', quest %></p>
+  <p><%= link_to 'Edit', edit_quest_path(quest) %></p>
+  <p><%= link_to 'Destroy', quest, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
+
+<br>
+
+<%= link_to 'New Quest', new_quest_path %>

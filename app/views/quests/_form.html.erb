@@ -1,0 +1,117 @@
+<%= form_for(@quest) do |f| %>
+  <% if @quest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quest.errors.count, "error") %> prohibited this quest from being saved:</h2>
+
+      <ul>
+      <% @quest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :attack %><br>
+    <%= f.text_field :attack %>
+  </div>
+  <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.text_field :strength %>
+  </div>
+  <div class="field">
+    <%= f.label :defence %><br>
+    <%= f.text_field :defence %>
+  </div>
+  <div class="field">
+    <%= f.label :ranged %><br>
+    <%= f.text_field :ranged %>
+  </div>
+  <div class="field">
+    <%= f.label :prayer %><br>
+    <%= f.text_field :prayer %>
+  </div>
+  <div class="field">
+    <%= f.label :magic %><br>
+    <%= f.text_field :magic %>
+  </div>
+  <div class="field">
+    <%= f.label :runecrafting %><br>
+    <%= f.text_field :runecrafting %>
+  </div>
+  <div class="field">
+    <%= f.label :construction %><br>
+    <%= f.text_field :construction %>
+  </div>
+  <div class="field">
+    <%= f.label :hitpoints %><br>
+    <%= f.text_field :hitpoints %>
+  </div>
+  <div class="field">
+    <%= f.label :agility %><br>
+    <%= f.text_field :agility %>
+  </div>
+  <div class="field">
+    <%= f.label :herblore %><br>
+    <%= f.text_field :herblore %>
+  </div>
+  <div class="field">
+    <%= f.label :thieving %><br>
+    <%= f.text_field :thieving %>
+  </div>
+  <div class="field">
+    <%= f.label :crafting %><br>
+    <%= f.text_field :crafting %>
+  </div>
+  <div class="field">
+    <%= f.label :fletching %><br>
+    <%= f.text_field :fletching %>
+  </div>
+  <div class="field">
+    <%= f.label :slayer %><br>
+    <%= f.text_field :slayer %>
+  </div>
+  <div class="field">
+    <%= f.label :hunter %><br>
+    <%= f.text_field :hunter %>
+  </div>
+  <div class="field">
+    <%= f.label :mining %><br>
+    <%= f.text_field :mining %>
+  </div>
+  <div class="field">
+    <%= f.label :smithing %><br>
+    <%= f.text_field :smithing %>
+  </div>
+  <div class="field">
+    <%= f.label :fishing %><br>
+    <%= f.text_field :fishing %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking %><br>
+    <%= f.text_field :cooking %>
+  </div>
+  <div class="field">
+    <%= f.label :firemaking %><br>
+    <%= f.text_field :firemaking %>
+  </div>
+  <div class="field">
+    <%= f.label :woodcutting %><br>
+    <%= f.text_field :woodcutting %>
+  </div>
+  <div class="field">
+    <%= f.label :farming %><br>
+    <%= f.text_field :farming %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! quest, :id, :attack, :strength, :defence, :ranged, :prayer, :magic, :runecrafting, :construction, :hitpoints, :agility, :herblore, :thieving, :crafting, :fletching, :slayer, :hunter, :mining, :smithing, :fishing, :cooking, :firemaking, :woodcutting, :farming, :name, :url, :created_at, :updated_at
+json.url quest_url(quest, format: :json)

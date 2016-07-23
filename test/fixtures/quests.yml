@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attack: MyString
+  strength: MyString
+  defence: MyString
+  ranged: MyString
+  prayer: MyString
+  magic: MyString
+  runecrafting: MyString
+  construction: MyString
+  hitpoints: MyString
+  agility: MyString
+  herblore: MyString
+  thieving: MyString
+  crafting: MyString
+  fletching: MyString
+  slayer: MyString
+  hunter: MyString
+  mining: MyString
+  smithing: MyString
+  fishing: MyString
+  cooking: MyString
+  firemaking: MyString
+  woodcutting: MyString
+  farming: MyString
+  name: MyString
+  url: MyString
+
+two:
+  attack: MyString
+  strength: MyString
+  defence: MyString
+  ranged: MyString
+  prayer: MyString
+  magic: MyString
+  runecrafting: MyString
+  construction: MyString
+  hitpoints: MyString
+  agility: MyString
+  herblore: MyString
+  thieving: MyString
+  crafting: MyString
+  fletching: MyString
+  slayer: MyString
+  hunter: MyString
+  mining: MyString
+  smithing: MyString
+  fishing: MyString
+  cooking: MyString
+  firemaking: MyString
+  woodcutting: MyString
+  farming: MyString
+  name: MyString
+  url: MyString
